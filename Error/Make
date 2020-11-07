@@ -1,0 +1,2 @@
+output: error1.cpp
+    g++ error1.cpp -o error1
