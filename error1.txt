@@ -1,0 +1,14 @@
+- Per i=0 di (a+b)+c vale: 0
+- Per i=0 di a+(b+c) vale: 7
+- Per i=1 di (a+b)+c vale: 0
+- Per i=1 di a+(b+c) vale: 70
+- Per i=2 di (a+b)+c vale: 0
+- Per i=2 di a+(b+c) vale: 700
+- Per i=3 di (a+b)+c vale: 0
+- Per i=3 di a+(b+c) vale: 7000
+- Per i=4 di (a+b)+c vale: 131072
+- Per i=4 di a+(b+c) vale: 70000
+- Per i=5 di (a+b)+c vale: 655360
+- Per i=5 di a+(b+c) vale: 700000
+- Per i=6 di (a+b)+c vale: 6.94682e+06
+- Per i=6 di a+(b+c) vale: 7e+06

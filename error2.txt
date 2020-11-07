@@ -1,0 +1,132 @@
+
+
+───( Valori piccoli di errore => miglior approssimazione )───
+
+
+Valore calcolato con math.h exp(0.5): 1.64872
+	- Valore di exp(0.5) con Taylor da n=0 a 3: 1.64583
+		Errore assoluto: 0.00288794
+		Errore relativo: 0.00175162
+
+	- Valore di exp(0.5) con Taylor da n=0 a 10: 1.64872
+		Errore assoluto: 1.27627e-11
+		Errore relativo: 7.74096e-12
+
+	- Valore di exp(0.5) con Taylor da n=0 a 50: 1.64872
+		Errore assoluto: 4.44089e-16
+		Errore relativo: 2.69354e-16
+
+	- Valore di exp(0.5) con Taylor da n=0 a 100: 1.64872
+		Errore assoluto: 4.44089e-16
+		Errore relativo: 2.69354e-16
+
+	- Valore di exp(0.5) con Taylor da n=0 a 150: 1.64872
+		Errore assoluto: 4.44089e-16
+		Errore relativo: 2.69354e-16
+
+
+Valore calcolato con math.h exp(30): 1.06865e+13
+	- Valore di exp(30) con Taylor da n=0 a 3: 4981
+		Errore assoluto: 1.06865e+13
+		Errore relativo: 1
+
+	- Valore di exp(30) con Taylor da n=0 a 10: 2.3883e+08
+		Errore assoluto: 1.06862e+13
+		Errore relativo: 0.999978
+
+	- Valore di exp(30) con Taylor da n=0 a 50: 1.06833e+13
+		Errore assoluto: 3.18471e+09
+		Errore relativo: 0.000298013
+
+	- Valore di exp(30) con Taylor da n=0 a 100: 1.06865e+13
+		Errore assoluto: 0.00390625
+		Errore relativo: 3.65532e-16
+
+	- Valore di exp(30) con Taylor da n=0 a 150: 1.06865e+13
+		Errore assoluto: 0.00390625
+		Errore relativo: 3.65532e-16
+
+
+Valore calcolato con math.h exp(-0.5): 0.606531
+	- Valore di exp(-0.5) con Taylor da n=0 a 3: 0.604167
+		Errore assoluto: 0.00236399
+		Errore relativo: 0.00389757
+
+	- Valore di exp(-0.5) con Taylor da n=0 a 3 come 1/exp(x): 1.65517
+		Errore assoluto: 1.04864
+		Errore relativo: 1.72892
+
+	- Valore di exp(-0.5) con Taylor da n=0 a 10: 0.606531
+		Errore assoluto: 1.17416e-11
+		Errore relativo: 1.93586e-11
+
+	- Valore di exp(-0.5) con Taylor da n=0 a 10 come 1/exp(x): 1.64872
+		Errore assoluto: 1.04219
+		Errore relativo: 1.71828
+
+	- Valore di exp(-0.5) con Taylor da n=0 a 50: 0.606531
+		Errore assoluto: 1.11022e-16
+		Errore relativo: 1.83045e-16
+
+	- Valore di exp(-0.5) con Taylor da n=0 a 50 come 1/exp(x): 1.64872
+		Errore assoluto: 1.04219
+		Errore relativo: 1.71828
+
+	- Valore di exp(-0.5) con Taylor da n=0 a 100: 0.606531
+		Errore assoluto: 1.11022e-16
+		Errore relativo: 1.83045e-16
+
+	- Valore di exp(-0.5) con Taylor da n=0 a 100 come 1/exp(x): 1.64872
+		Errore assoluto: 1.04219
+		Errore relativo: 1.71828
+
+	- Valore di exp(-0.5) con Taylor da n=0 a 150: 0.606531
+		Errore assoluto: 1.11022e-16
+		Errore relativo: 1.83045e-16
+
+	- Valore di exp(-0.5) con Taylor da n=0 a 150 come 1/exp(x): 1.64872
+		Errore assoluto: 1.04219
+		Errore relativo: 1.71828
+
+
+Valore calcolato con math.h exp(-30): 9.35762e-14
+	- Valore di exp(-30) con Taylor da n=0 a 3: -4079
+		Errore assoluto: 4079
+		Errore relativo: 4.35901e+16
+
+	- Valore di exp(-30) con Taylor da n=0 a 3 come 1/exp(x): -0.000245158
+		Errore assoluto: 0.000245158
+		Errore relativo: 2.61988e+09
+
+	- Valore di exp(-30) con Taylor da n=0 a 10: 1.21255e+08
+		Errore assoluto: 1.21255e+08
+		Errore relativo: 1.29579e+21
+
+	- Valore di exp(-30) con Taylor da n=0 a 10 come 1/exp(x): 8.24709e-09
+		Errore assoluto: 8.247e-09
+		Errore relativo: 88131.3
+
+	- Valore di exp(-30) con Taylor da n=0 a 50: 8.78229e+08
+		Errore assoluto: 8.78229e+08
+		Errore relativo: 9.38517e+21
+
+	- Valore di exp(-30) con Taylor da n=0 a 50 come 1/exp(x): 1.13865e-09
+		Errore assoluto: 1.13856e-09
+		Errore relativo: 12167.2
+
+	- Valore di exp(-30) con Taylor da n=0 a 100: -4.82085e-06
+		Errore assoluto: 4.82085e-06
+		Errore relativo: 5.15179e+07
+
+	- Valore di exp(-30) con Taylor da n=0 a 100 come 1/exp(x): -207432
+		Errore assoluto: 207432
+		Errore relativo: 2.21672e+18
+
+	- Valore di exp(-30) con Taylor da n=0 a 150: -4.82086e-06
+		Errore assoluto: 4.82086e-06
+		Errore relativo: 5.1518e+07
+
+	- Valore di exp(-30) con Taylor da n=0 a 150 come 1/exp(x): -207432
+		Errore assoluto: 207432
+		Errore relativo: 2.21671e+18
+
