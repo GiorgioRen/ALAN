@@ -1,6 +1,0 @@
-
-Valore massimo di ds=24
-Valore massimo di dd=53
-Singola precisione di eps=5.96046e-08
-Doppia precisione di eps=1.11022e-16
-
