@@ -22,30 +22,30 @@ int fact(int n){
 }
 
 // ~ Definizione funzione NORMA_INF = max(somma modulo riga) ~
-double norma_inf(int n, int m, int matr[n][m]) {
+double norma_inf(int M, int N, *int matr[]) {
 	int norma, tmp = 0;
-	for (int i=0; i<n; i++){
-		for (int j=0; j<m; j++){
+	for (int i=0; i<M; i++){
+		for (int j=0; j<N; j++){
 			tmp += abs(matr[i][j]);
 		}
 		if (tmp > norma) norma = tmp;
 		tmp=0; //reset
 	}
 	return norma;
-};
+}
 
 // ~ Definizione funzione che calcola matrice di PASCAL ~
-void calcola_p(int n, int matr[n][n]){
+void calcola_p(int n, int *matr[][]){
 	int numeratore, denominatore, d1, d2 = 0;
 	for (int i=0; i<n; i++){
 		for (int j=0; j<n; j++){
-			matrice_pascal[i][j] = (fact((i+1)+(j+1)-2))/(fact(i)*fact(j));; //i,j:0->9
+			matr[i][j] = (fact((i+1)+(j+1)-2))/(fact(i)*fact(j));; //i,j:0->9
 		}
 	}
 }
 
 // ~ Definizione funzione che calcola matrice TRIDIAGONALE ~
-void calcola_t(int n, matr[n][n]){
+void calcola_t(int n, int *matr[][]){
 	for (int i=0;i<n;i++) {
 		for (int j=0;j<n;j++) {
 			if (i==j) matr[i][j]=2;
@@ -57,19 +57,19 @@ void calcola_t(int n, matr[n][n]){
 
 
 // ----------
-void stampa_matrice(int m, int n, int matr[]){
-	for (int r=0; r<m; r++){
+void stampa_matrice(int m, int n, int *matr[][]){
+	for (int i=0; i<m; i++){
 		cout << "{ ";
-		for (int c=0; c<n; c++){
-			cout << matr[r*n+c];
-			if (c+1!=n) cout<<", "; // inserimento virgola ','
+		for (int j=0; j<n; j++){
+			cout << matr[i][j];
+			if (j+1!=n) cout<<", "; // inserimento virgola ','
 		}
 		cout << " }\n";
 	}
 	cout << endl;
 }
 
-void stampa_array(int dim, int norma[dim]){
+void stampa_array(int dim, int *norma[]){
 	for (size_t i = 0; i < dim; i++) {
 		cout << norma[i] << endl;
 	}
@@ -80,14 +80,14 @@ int main() {
 	cout << endl;
 	// d0 ultima cifra matricola, d1 penultima cifra matricola:
 	// Giorgio R. -> xxxxx86
-	int d0 = 6;
-	int d1 = 8;
+	const int d0 = 6;
+	const int d1 = 8;
 
 	// n righe n colonne:
-	int n_a1 = 4;
-	int n_a2 = 4;
-	int n_p = 10;
-	int n_t = 10 * (d1 + 1) + d0;
+	const int n_a1 = 4;
+	const int n_a2 = 4;
+	const int n_p = 10;
+	const int n_t = 10 * (d1 + 1) + d0;
 
 	// Dichiarazioni matrici:
 	/* 2D dynamic array reference:
@@ -98,27 +98,23 @@ int main() {
 	ary[i*m + j]
 	*/
 
-	int a1[] = {3, 1, -1, 0, 0, 7, -3, 0, 0, -3, 9, -2, 0, 0, 4, -10};
+	int a1[4][4] = {{3, 1, -1, 0}, {0, 7, -3, 0}, {0, -3, 9, -2}, {0, 0, 4, -10}};
 	cout << "- Matrice A1:" << endl;
 	stampa_matrice(n_a1, n_a1, a1);
+	cout << "Norma matrice A1: " << norma_inf(n_a1, n_a1, a1) << endl;
 
-	int a2[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 0, 0, 0};
+	int a2[4][4] = {{0, 1, 2, 3}, {4, 5, 6, 7}, {8, 9, 10, 11}, {0, 0, 0, 0}};
 	cout << "- Matrice A2:" << endl;
 	stampa_matrice(n_a2, n_a2, a2);
+	cout << "Norma matrice A2: " << norma_inf(n_a2, n_a2, a2) << endl;
 
 	// Matrice di Pascal
-	int *p = new int[n_p * n_p];
-	for(int i=1; i<n_p; i++){
-		for(int j=1; j<n_p; j++){
-			int numeratore = fact(i+j-2);
-			int d1 = fact(i-1);
-			int d2 = fact(j-1);
-			int denominatore = (d1*d2);
-			p[i*n_p+j] = numeratore/denominatore;
-		}
-	}
+	int **p = new int*[n_p];
+	for(int i=0; i<n_p; i++) p[n_p]=new int[n_p];
+	calcola_p(n_p, p);
 	cout << "- Matrice P:" << endl;
 	stampa_matrice(n_p, n_p, p);
+	cout << "Norma matrice P: " << norma_inf(n_p, n_p, p) << endl;
 
 
 
