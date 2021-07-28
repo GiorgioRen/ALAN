@@ -44,7 +44,6 @@ void rel_error(double m_result, double t_result){
     cout << "\t\tErrore relativo: " << (double)abs(t_result-m_result)/m_result << endl << endl;
 }
 
-
 //────────( Main )────────//
 int main(){
 

@@ -3,23 +3,21 @@
 using namespace std;
 /*
 * ╔════════════════════════════╗
-* ║ ALAN - Labo Error          ║
-* ╟────────────────────────────╨──────────╗
-* ║ Usage: g++ sistemi1a.cpp -o sistemi1a ║
-* ╟────────────────────────────╥──────────╝
+* ║ ALAN - Labo Sistemi        ║
+* ╟────────────────────────────╨───────────────────────╗
+* ║ Usage: g++ sistemi1c.cpp -o sistemi1c; ./sistemi1c ║
+* ╟────────────────────────────╥───────────────────────╝
 * ╚════════════════════════════╝
 *
 * 1.c) Definire e calcolare norma inf. della matrice tridiagonale definita in sistemi.pdf
 *
 */
 
-// TODO: LA NORMA NON FUNZIONA
-
 unsigned int norma_inf(int *matrice[], int n) {
-	unsigned long long int norma, tmp = 0;
-	for (unsigned int i=0; i<n; i++){
-		for (unsigned int j=0; j<n; j++){
-			tmp = tmp+abs(matrice[i][j]);
+	float norma, tmp = 0;
+	for (int i=0; i<n; i++){
+		for (int j=0; j<n; j++){
+			tmp = tmp+fabs(matrice[i][j]);
 		}
 		if (tmp > norma) norma = tmp;
 		tmp=0; //reset

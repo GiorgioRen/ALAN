@@ -3,25 +3,25 @@
 using namespace std;
 /*
 * ╔════════════════════════════╗
-* ║ ALAN - Labo Error          ║
-* ╟────────────────────────────╨──────────╗
-* ║ Usage: g++ sistemi1b.cpp -o sistemi1b ║
-* ╟────────────────────────────╥──────────╝
+* ║ ALAN - Labo Sistemi        ║
+* ╟────────────────────────────╨───────────────────────╗
+* ║ Usage: g++ sistemi1b.cpp -o sistemi1b; ./sistemi1b ║
+* ╟────────────────────────────╥───────────────────────╝
 * ╚════════════════════════════╝
 *
 * 1.b) Definire e calcolare norma inf. della matrice di Pascal
 * MATRICE p
 */
 
-int fact(int n){
+float fact(int n){
 	return (n==0) || (n==1) ? 1 : n* fact(n-1);
 }
 
-unsigned int norma_inf(int matrice[10][10]) {
-	int norma, tmp = 0;
+float norma_inf(int matrice[10][10]) {
+	float norma, tmp = 0;
 	for (int i=0; i<10; i++){
 		for (int j=0; j<10; j++){
-			tmp += abs(matrice[i][j]);
+			tmp += fabs(matrice[i][j]);
 		}
 		if (tmp > norma) norma = tmp;
 		tmp=0; //reset

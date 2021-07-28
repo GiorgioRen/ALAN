@@ -3,14 +3,26 @@
 using namespace std;
 /*
  * ╔════════════════════════════╗
- * ║ ALAN - Labo Error          ║
- * ╟────────────────────────────╨──────────╗
- * ║ Usage: g++ sistemi1a.cpp -o sistemi1a ║
- * ╟────────────────────────────╥──────────╝
+ * ║ ALAN - Labo Sistemi        ║
+ * ╟────────────────────────────╨───────────────────────╗
+ * ║ Usage: g++ sistemi1a.cpp -o sistemi1a; ./sistemi1a ║
+ * ╟────────────────────────────╥───────────────────────╝
  * ╚════════════════════════════╝
  *
- * 1.a) Definire e calcolare norma inf. delle matrici a1 e a2 definite in sistemi.pdf
- * MATRICI a1 e a2
+ * 1.a) Definire e calcolare la norma infinito delle matrici a1 e a2 definite in
+ *      sistemi.pdf
+ *
+ * Matrice A1:
+ *	{ 3, 1, -1, 0 }
+ *	{ 0, 7, -3, 0 }
+ *	{ 0, -3, 9, -2 }
+ *	{ 0, 0, 4, -10 }
+ *
+ * Matrice A2:
+ *	{ 2, 4, -2, 0 }
+ *	{ 1, 3, 0, 1 }
+ *	{ 3, -1, 1, 2 }
+ *	{ 0, -1, 2, 1 }
  */
 
 unsigned int norma_inf(int matrice[4][4]) {
@@ -43,7 +55,7 @@ int main() {
 	stampa_matrice(a1);
 	cout << "Norma matrice a1: " << norma_inf(a1) << endl << endl;
 
-	int a2[4][4] = {{0, 1, 2, 3}, {4, 5, 6, 7}, {8, 9, 10, 11}, {0, 0, 0, 0}};
+	int a2[4][4] = {{2, 4, -2, 0}, {1, 3, 0, 1}, {3, -1, 1, 2}, {0, -1, 2, 1}};
 	cout << "- Matrice a2:" << endl;
 	stampa_matrice(a2);
 	cout << "Norma matrice a2: " << norma_inf(a2) << endl << endl;

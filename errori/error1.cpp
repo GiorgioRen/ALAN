@@ -19,6 +19,8 @@ using namespace std;
  * b = (d1 +1)·1020
  * c = −b
  *
+ * calcolare (a+b)+c e a+(b+c)
+ *
  * xxxxx86
  * d0 = 6
  * d1 = 8
@@ -26,18 +28,14 @@ using namespace std;
 int main(){
     // matricola: xxxxx86
     int d0=6, d1=8;
-    double a, b=(d1+1)*pow(10,20), c=-b, o1, o2;
+    double a, b=(d1+1)*pow(10,20), c=-b;
 
+    cout << endl;
     for (int i = 0; i < 7; i++){
         //calcolo a
         a = (d0 +1)*pow(10,i);
-        // calcolo di 01 e 02
-        o1=a+b;
-        o2=b+c;
-        o1=o1+c;
-        o2=o2+a;
-        cout << "- Per i=" << i << " di (a+b)+c vale: " << o1 << endl;
-        cout << "- Per i=" << i << " di a+(b+c) vale: " << o2 << endl;
+        cout << "- Per i=" << i << ", (a+b)+c vale: " << (a+b)+c << endl;
+        cout << "- Per i=" << i << ", a+(b+c) vale: " << a+(b+c) << endl << endl;
     }
     return 0;
 }
