@@ -2,7 +2,11 @@
 
 ## Laboratorio Sistemi - A.A. 2020/2021
 
-Le due soluzioni del sistema lineare con $x$ e $\tilde{x}$ 
+Le due soluzioni del sistema lineare $x$ e $\tilde{x}$, date dai termini noti $b$ e da $b+\delta b$ differiscono.
+
+Dall'output si può notare come una piccola perturbazione ($\pm 0.01$) dell'input provochi una variazione notevole nella risoluzione del sistema.
+
+Questo è particolarmente visibile nella risoluzione del sistema lineare dato dalla matrice di pascal, dove la perturbazione viene amplificata di circa 9000 volte, generando soluzioni completamente diverse.
 
 ### Output prodotto da `sistemi.cpp`
 
